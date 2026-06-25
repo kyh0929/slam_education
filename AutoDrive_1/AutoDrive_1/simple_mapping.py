@@ -59,7 +59,7 @@ class SimpleYawObstacleAvoider(Node):
                 if self.rotate_cnt>10:
                     self.rotate_cnt=0
                     twist.twist.linear.x = -1 * self.linear_speed
-                    twist.twist.angular.z = self.angular_speed * (1 if angle_diff > 0 else -1) * 3
+                    # twist.twist.angular.z = self.angular_speed * (1 if angle_diff > 0 else -1) * 3
                 else:
                     twist.twist.linear.x = 0.0
                     twist.twist.angular.z = self.angular_speed * (1 if angle_diff > 0 else -1)
@@ -83,7 +83,7 @@ class SimpleYawObstacleAvoider(Node):
                 if self.rotate_cnt>10:
                     self.rotate_cnt=0
                     twist.twist.linear.x = -1 * self.linear_speed
-                    twist.twist.angular.z = self.angular_speed * turn_dir * 3
+                    # twist.twist.angular.z = self.angular_speed * turn_dir * 3
 
                 else:
                     twist.twist.linear.x = 0.0
