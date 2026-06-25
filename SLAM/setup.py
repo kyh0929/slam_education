@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'test_pkg_4'
+package_name = 'SLAM'
 
 setup(
     name=package_name,
@@ -10,11 +10,10 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch',['launch/publish_test.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='user06',
+    maintainer='user04',
     maintainer_email='pup0929@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
@@ -25,9 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'talker = test_pkg_4.talker:main',
-            'listener = test_pkg_4.listener:main',
-            'processor = test_pkg_4.processor:main',
+            'random_motion = SLAM.random_motion:main',
         ],
     },
 )

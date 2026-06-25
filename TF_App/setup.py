@@ -10,6 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch',['launch/slam.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -27,6 +28,7 @@ setup(
             'tf_static = TF_App.tf_static:main',
             'tf_dynamic = TF_App.tf_dynamic:main',
             'tf_listener = TF_App.tf_listener:main',
+            'random_motion = TF_App.random_motion:main',
         ],
     },
 )
